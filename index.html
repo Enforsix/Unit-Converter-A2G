@@ -9,6 +9,8 @@
   </head>
   <body>
       <h1>Number Converter</h1>
+      <fieldset>
+        <legend class="LG">Input</legend>
         <form class="from">
           <label for="unitInput"> 
             Skriv in verdi her. 
@@ -26,8 +28,8 @@
           </select>
         </label>
 
-         <label for="unitTo"> 
-          Velg ønsket Verdi
+        <label for="unitTo"> 
+          Velg ønsket Verdi.
             <select name="unitTo" id="unitTo">
               <option value="ML">ML</option>
               <option value="CL">CL</option>
@@ -36,8 +38,14 @@
               <option value="M3">M3</option>
             </select>
           </label>
-          <button id="convertBtn" type="button">Konverter</button>
-          <p id="displayResult"></p>
+      </fieldset>
+        
+      <fieldset>
+        <legend class="LG">Resuiltat</legend>
+        <p id="displayResult"></p>
+      </fieldset> 
+      <br/>        
+      <button id="convertBtn" type="button">Konverter</button>          
       </form>
   </body>
 </html>
