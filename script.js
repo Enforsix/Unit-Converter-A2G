@@ -1,38 +1,30 @@
 function unitConverter(even) {
-    even.preventDefault ()
+    even.preventDefault ();
 
     const unitInput = parseFloat(document.querySelector("#unitInput").value);
-    console.log(unitInput);
-
     const unitFrom = document.querySelector("#unitFrom").value;
-
     const unitTo = document.querySelector("#unitTo").value;
 
     let displayResult = document.querySelector("#displayResult");
 
+
     if (unitFrom === "ML" && unitTo === "CL") {
      displayResult.textContent = unitInput / 10; 
-
     } else if (unitFrom === "ML" && unitTo === "DL") {
      displayResult.textContent = unitInput / 100;
-
     } else if (unitFrom === "ML" && unitTo === "L") {
      displayResult.textContent = unitInput / 1000; 
-
     }else if (unitFrom === "ML" && unitTo === "M3") {
      displayResult.textContent = unitInput / 1000000;
 
 
 
-    } else if (unitFrom === "CL" && unitTo === "MM") {
+    } else if (unitFrom === "CL" && unitTo === "ML") {
      displayResult.textContent = unitInput * 10;
-
     }else if (unitFrom === "CL" && unitTo === "DL") {
      displayResult.textContent = unitInput / 10;
-
     }else if (unitFrom === "CL" && unitTo === "L") {
-     displayResult.textContent = unitInput / 100; 
-       
+     displayResult.textContent = unitInput / 100;        
     }else if (unitFrom === "CL" && unitTo === "M3") {
      displayResult.textContent = unitInput / 100000;
 
@@ -45,7 +37,7 @@ function unitConverter(even) {
      displayResult.textContent = unitInput * 10;   
     }else if (unitFrom === "DL" && unitTo === "L") {
      displayResult.textContent = unitInput / 10;
-    } else if (unitFrom === "DL" && unitTo === "M3") {
+    }else if (unitFrom === "DL" && unitTo === "M3") {
      displayResult.textContent = unitInput / 10000;
     } 
 
@@ -58,8 +50,11 @@ function unitConverter(even) {
     displayResult.textContent = unitInput * 100;   
    }else if (unitFrom === "L" && unitTo === "DL") {
     displayResult.textContent = unitInput * 10;
-   } else if (unitFrom === "L" && unitTo === "M3") {
+   }else if (unitFrom === "L" && unitTo === "M3") {
     displayResult.textContent = unitInput /1000;
+
+
+    
 
    }else if (unitFrom === "M3" && unitTo === "ML") {
    displayResult.textContent = unitInput * 1000000;   
@@ -67,11 +62,11 @@ function unitConverter(even) {
    displayResult.textContent = unitInput * 100000;   
    }else if (unitFrom === "M3" && unitTo === "DL") {
    displayResult.textContent = unitInput * 10000;
-   } else if (unitFrom === "M3" && unitTo === "L") {
+   }else if (unitFrom === "M3" && unitTo === "L") {
     displayResult.textContent = unitInput * 1000;
    }else {
 
-    displayResult.textContent = "velg knverterings enheter";
+    displayResult.textContent = "Velg konverteringsenheter";
     displayResult.style.color = "orange";
    }
 }
